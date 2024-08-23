@@ -1,0 +1,75 @@
+<html>
+    <title>Registration page</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color:rgb(0, 0, 139);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            height: 500px;
+            width: 400px;
+            background-color: rgb(227, 241, 229);
+            padding: 50px;
+        }
+        input {
+            height: 50px;
+            width: 90%;
+            margin-bottom: 20px;
+            border: 1px solid rgb(6, 30, 31)
+        }
+        button {
+            height: 50px;
+            width: 90%;
+            border: non;
+            background-color:rgb(198, 19, 19);
+            color:rgb(186, 226, 43);
+
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="form">
+                <h2>Registration</h2>
+            <form>
+                <lable>Name</lable><br />
+                <input id="name" type="text" />
+                <br />
+                <lable>Email</lable><br />
+                <input id="email" type="email" />
+                <br />
+                <lable>password</lable><br />
+                <input id="pass" type="password" />
+
+            </form>
+            <button onclick="savedata()">submit</button>
+
+            </div>
+            
+        </div>
+    </body>
+    <script>
+        function savedata() {
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let pass=document.getElementById("pass").value;
+            if(name==""){
+                alert("plese enter name");
+            }
+            else if(email==""){
+                alert("plese enter email")
+
+            }
+            else if(pass==""){
+                alert("please enter password");
+            }
+            else{
+                alert(name+" "+email+" "+pass);
+            }
+
+        }
+    </script>
+</html>
